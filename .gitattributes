@@ -1,0 +1,7 @@
+# see git help attributes (https://git-scm.com/docs/gitattributes)
+
+# do end-of-line conversion - always to lf
+* text=auto eol=lf
+
+# These are explicitly windows files and should use crlf
+*.bat text eol=crlf
