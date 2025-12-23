@@ -1,4 +1,4 @@
-package com.example.myapplication
+package edu.seminar.ouronlyhome
 
 import org.junit.Test
 

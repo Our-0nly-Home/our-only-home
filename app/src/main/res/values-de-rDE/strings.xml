@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Our Only Home</string>
+    <string name="planet_mars_title">Der Rote Planet: Mars</string>
+    <string name="planet_jupiter_title">Der Gasriese: Jupiter</string>
+    <string name="default_title">Unbekannter Planet</string>
+</resources>
