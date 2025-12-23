@@ -1,0 +1,46 @@
+name: Android Build and Release
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  APP_MODULE: 'app' # Der Name Ihres Haupt-App-Moduls
+  VERSION_NAME: '1.0.${{ github.run_number }}' # Dynamische Version
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 🔐 WICHTIG: Berechtigung zum Erstellen von Releases
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: JDK einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Gradle einrichten und Cachen
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: wrapper
+          cache-read-only: ${{ github.ref != 'refs/heads/main' }}
+
+      - name: Unsignierte APK Bauen
+        run: ./gradlew :${{ env.APP_MODULE }}:assembleRelease
+
+      - name: GitHub Release erstellen
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: release-v${{ env.VERSION_NAME }}
+          name: Release v${{ env.VERSION_NAME }}
+          generate_release_notes: true
+          files: |
+            ${{ env.APP_MODULE }}/build/outputs/apk/release/*.apk
+          draft: false
+          prerelease: false
