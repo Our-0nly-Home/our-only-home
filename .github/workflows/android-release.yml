@@ -31,8 +31,19 @@ jobs:
           gradle-version: wrapper
           cache-read-only: ${{ github.ref != 'refs/heads/main' }}
 
+      - name: Decode Keystore
+        env:
+          ENCODED_STRING: ${{ secrets.APP_UPLOAD_KEYSTORE }}
+        run: |
+            echo $ENCODED_STRING | base64 -di > release-key.jks    
+
       - name: Unsignierte APK Bauen
         run: ./gradlew :${{ env.APP_MODULE }}:assembleRelease
+        env:
+          SIGNING_KEY_STORE_PATH: ${{ github.workspace }}/release-key.jks
+          SIGNING_KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          SIGNING_KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          SIGNING_STORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
 
       - name: GitHub Release erstellen
         uses: softprops/action-gh-release@v2
