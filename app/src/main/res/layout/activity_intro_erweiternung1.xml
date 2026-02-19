@@ -11,19 +11,16 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="719dp"
-        android:layout_height="82dp"
-        android:layout_marginEnd="4dp"
-        android:text="Vielen Dank das sie dieses Spiel ausprobieren, wir hoffen ihnen wird es gefallen und sie werden dem Thema nähergebracht."
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="99dp" />
+        android:layout_width="855dp"
+        android:layout_height="223dp"
+        android:layout_marginTop="16dp"
+        android:background="#80000000"
+        android:padding="1dp"
+        android:text="Vielen Dank das sie dieses Spiel ausprobieren, wir hoffen ihnen wird es gefallen und sie werden dem Thema nähergebracht.In einer Zeit wo deine eigene Welt untergegangen bist, hast du dich entschlossen in letzter Sekunde zu fliehen. Du nahmst dir ein Raumschiff und entkamst in das All. Der Planet war viel zu dreckig und verschmutzt um dort noch länger zu leben."
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="5dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="721dp"
-        android:layout_height="67dp"
-        android:layout_marginEnd="4dp"
-        android:text="2 In einer Zeit wo deine eigene Welt untergegangen bist, hast du dich entschlossen in letzter Sekunde zu fliehen. Du nahmst dir ein Raumschiff und entkamst in das All. Der Planet war viel zu dreckig und verschmutzt um dort noch länger zu leben."
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="181dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

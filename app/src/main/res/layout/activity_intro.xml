@@ -9,11 +9,16 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="337dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="156dp"
-        android:text="Button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="242dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="Game Start"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
