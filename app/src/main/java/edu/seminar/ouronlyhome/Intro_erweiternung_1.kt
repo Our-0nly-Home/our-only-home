@@ -16,5 +16,6 @@ class Intro_erweiternung_1 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        R.drawable.cat_black_white
     }
 }

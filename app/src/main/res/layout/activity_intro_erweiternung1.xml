@@ -5,23 +5,25 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cat_black_white"
+    android:orientation="horizontal"
     tools:context=".Intro_erweiternung_1">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="770dp"
-        android:layout_height="86dp"
-        android:layout_marginEnd="252dp"
+        android:layout_width="719dp"
+        android:layout_height="82dp"
+        android:layout_marginEnd="4dp"
         android:text="Vielen Dank das sie dieses Spiel ausprobieren, wir hoffen ihnen wird es gefallen und sie werden dem Thema nähergebracht."
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="311dp" />
+        tools:layout_editor_absoluteY="99dp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="770dp"
-        android:layout_height="75dp"
-        android:layout_marginEnd="252dp"
+        android:layout_width="721dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="4dp"
         android:text="2 In einer Zeit wo deine eigene Welt untergegangen bist, hast du dich entschlossen in letzter Sekunde zu fliehen. Du nahmst dir ein Raumschiff und entkamst in das All. Der Planet war viel zu dreckig und verschmutzt um dort noch länger zu leben."
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="397dp" />
+        tools:layout_editor_absoluteY="181dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
