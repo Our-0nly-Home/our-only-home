@@ -20,4 +20,3 @@ class ExampleInstrumentedTest {
     assertEquals("edu.seminar.ouronlyhome", appContext.packageName)
   }
 }
-#wadw
