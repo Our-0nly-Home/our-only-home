@@ -6,13 +6,13 @@ import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-class Mülltrennung2 : AppCompatActivity() {
+class Lebensmittelverschwendung2 : AppCompatActivity() {
     private var receivedPoints: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_muelltrennung2)
+        setContentView(R.layout.activity_lebensmittelverschwendung2)
 
         receivedPoints = intent.getIntExtra("SCORE_POINTS", 0)
 
@@ -35,9 +35,8 @@ class Mülltrennung2 : AppCompatActivity() {
 
     private fun navigateToNext(points: Int) {
         val totalPoints = receivedPoints + points
-        val intent = Intent(this, ScoreActivity::class.java).apply {
-            putExtra("TOTAL_SCORE", totalPoints)
-            putExtra("MAX_SCORE", 20) // Assuming 10 points max per activity
+        val intent = Intent(this, VerantwortungUnternehmen::class.java).apply {
+            putExtra("SCORE_POINTS", totalPoints)
         }
         startActivity(intent)
     }

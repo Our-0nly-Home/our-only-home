@@ -11,27 +11,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OurOnlyHome">
-        <activity
-            android:name=".Mülltrennung"
-            android:exported="false" />
-        <activity
-            android:name=".Mülltrennung2"
-            android:exported="false" />
-        <activity
-            android:name=".ScoreActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PlanetActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+
+        <activity android:name=".Muelltrennung" android:exported="false" />
+        <activity android:name=".Plastikverschwendung" android:exported="false" />
+        <activity android:name=".Wasserverbrauch" android:exported="false" />
+        <activity android:name=".FastFashion" android:exported="false" />
+        <activity android:name=".Lebensmittelverschwendung" android:exported="false" />
+        <activity android:name=".VerantwortungUnternehmen" android:exported="false" />
+
+        <activity android:name=".Muelltrennung2" android:exported="false" />
+        <activity android:name=".Plastikverschwendung2" android:exported="false" />
+        <activity android:name=".Wasserverbrauch2" android:exported="false" />
+        <activity android:name=".FastFashion2" android:exported="false" />
+        <activity android:name=".Lebensmittelverschwendung2" android:exported="false" />
+        <activity android:name=".VerantwortungUnternehmen2" android:exported="false" />
+
+        <activity android:name=".Bildung" android:exported="false" />
+        <activity android:name=".ScoreActivity" android:exported="false" />
+        <activity android:name=".PlanetActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="true" />
+
         <activity
             android:name=".Umweltbewusstsein"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

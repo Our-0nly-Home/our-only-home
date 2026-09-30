@@ -6,11 +6,16 @@ import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-class Umweltbewusstsein : AppCompatActivity() {
+class Bildung : AppCompatActivity() {
+    private var receivedPoints: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_umweltbewusstsein)
+        setContentView(R.layout.activity_bildung)
+
+        receivedPoints = intent.getIntExtra("SCORE_POINTS", 0)
+
         val option1 = findViewById<Button>(R.id.btn_option1)
         val option2 = findViewById<Button>(R.id.btn_option2)
         val option3 = findViewById<Button>(R.id.btn_option3)
@@ -28,15 +33,12 @@ class Umweltbewusstsein : AppCompatActivity() {
         }
     }
 
-
     private fun navigateToNext(points: Int) {
-        val intent = Intent(this, Muelltrennung::class.java).apply {
-            // This sends the point value to the next activity
-            putExtra("SCORE_POINTS", points)
+        val totalPoints = receivedPoints + points
+        val intent = Intent(this, ScoreActivity::class.java).apply {
+            putExtra("TOTAL_SCORE", totalPoints)
+            putExtra("MAX_SCORE", 140) // 14 questions total
         }
         startActivity(intent)
     }
-
 }
-
-

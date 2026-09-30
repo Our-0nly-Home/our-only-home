@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".Mülltrennung">
+    tools:context=".Muelltrennung">
 
     <ImageView
         android:id="@+id/iv_background"
@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:background="#000000"
         android:scaleType="fitCenter"
-        android:src="@drawable/frage3"
+        android:src="@drawable/frage7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="frage"
+        android:text="Was können Geschäfte tun, um weniger Müll zu produzieren?"
         android:textColor="#000000"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_option1"
@@ -47,7 +47,7 @@
         android:paddingTop="4dp"
         android:paddingRight="8dp"
         android:paddingBottom="4dp"
-        android:text="Option 1"
+        android:text="Sie können auf Einwegverpackungen verzichten, Mehrweg-Alternativen anbieten und Recycling fördern."
         android:textColor="#000000"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
         android:paddingTop="4dp"
         android:paddingRight="8dp"
         android:paddingBottom="4dp"
-        android:text="Option 2"
+        android:text="Sie machen weiter wie bisher, Müll ist für sie kein großes Problem."
         android:textColor="#000000"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@+id/btn_option1"
@@ -91,7 +91,7 @@
         android:paddingTop="4dp"
         android:paddingRight="8dp"
         android:paddingBottom="4dp"
-        android:text="Option 3"
+        android:text=" Sie könnten zumindest Recyclingpapier verwenden, aber mehr nicht."
         android:textColor="#000000"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@+id/btn_option2"

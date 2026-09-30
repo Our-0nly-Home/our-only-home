@@ -6,11 +6,17 @@ import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-class Umweltbewusstsein : AppCompatActivity() {
+class Wasserverbrauch : AppCompatActivity() {
+    private var receivedPoints: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_umweltbewusstsein)
+        setContentView(R.layout.activity_wasserverbrauch)
+
+        // Receive points from the previous activity
+        receivedPoints = intent.getIntExtra("SCORE_POINTS", 0)
+
         val option1 = findViewById<Button>(R.id.btn_option1)
         val option2 = findViewById<Button>(R.id.btn_option2)
         val option3 = findViewById<Button>(R.id.btn_option3)
@@ -28,15 +34,13 @@ class Umweltbewusstsein : AppCompatActivity() {
         }
     }
 
-
     private fun navigateToNext(points: Int) {
-        val intent = Intent(this, Muelltrennung::class.java).apply {
-            // This sends the point value to the next activity
-            putExtra("SCORE_POINTS", points)
+        // Accumulate points
+        val totalPoints = receivedPoints + points
+        val intent = Intent(this, FastFashion::class.java).apply {
+            // Pass the new total to the next activity
+            putExtra("SCORE_POINTS", totalPoints)
         }
         startActivity(intent)
     }
-
 }
-
-

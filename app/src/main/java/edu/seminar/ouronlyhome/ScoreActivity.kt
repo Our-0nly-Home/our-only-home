@@ -14,7 +14,7 @@ class ScoreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_score)
 
         val totalScore = intent.getIntExtra("TOTAL_SCORE", 0)
-        val maxScore = intent.getIntExtra("MAX_SCORE", 20)
+        val maxScore = intent.getIntExtra("MAX_SCORE", 140)
 
         val tvTotalScore = findViewById<TextView>(R.id.tv_total_score)
         tvTotalScore.text = "$totalScore / $maxScore"
