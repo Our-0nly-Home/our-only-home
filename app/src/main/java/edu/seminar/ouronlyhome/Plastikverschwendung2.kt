@@ -21,15 +21,15 @@ class Plastikverschwendung2 : AppCompatActivity() {
         val option3 = findViewById<Button>(R.id.btn_option3)
 
         option1.setOnClickListener {
-            navigateToNext(10)
+            navigateToNext(0)
         }
 
         option2.setOnClickListener {
-            navigateToNext(5)
+            navigateToNext(10)
         }
 
         option3.setOnClickListener {
-            navigateToNext(0)
+            navigateToNext(5)
         }
     }
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frage5">
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="Gut das du da bist! Wir brauchen deine hilfe. Wir haben viel zu viel Abfall den wir vermeiden möchten aber leider haben wir keine richtige Idee wie wir das erreichen sollen. Deshalb wollen wir dir ein paar fragen dazu stellen und du musst nur sagen was du an unserer Stelle machen würdest oder was deiner Meinung nach größere Unternehmen bei tragen könnten."
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73" />
+
+    <Button
+        android:id="@+id/btn_start_quiz"
+        android:layout_width="103dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="128dp"
+        android:text="Los gehts!"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_intro" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     >
 
     <ImageView
-        android:background="#000000"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/frage7"
+        android:background="@drawable/frage7"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,12 +19,13 @@
 
     <TextView
         android:id="@+id/tv_frage"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="Wie kannst du dich über Umweltthemen informieren und andere aufklären?"
         android:textColor="#000000"
         android:textSize="15sp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/btn_option1"
         app:layout_constraintEnd_toEndOf="@+id/btn_option1"
         app:layout_constraintStart_toStartOf="@+id/btn_option1" />
@@ -34,8 +35,6 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="480dp"
-        android:layout_marginTop="248dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:minWidth="0dp"
@@ -44,11 +43,15 @@
         android:paddingTop="4dp"
         android:paddingRight="8dp"
         android:paddingBottom="4dp"
-        android:text=" Ich nutze Bücher, Dokumentationen, soziale Medien und besuche Veranstaltungen, um mich zu informieren."
+        android:text=" Ich schaue nur ab und zu Nachrichten, ohne aktiv nach Informationen zu suchen."
         android:textColor="#000000"
         android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
@@ -88,12 +91,13 @@
         android:paddingTop="4dp"
         android:paddingRight="8dp"
         android:paddingBottom="4dp"
-        android:text="Ich schaue nur ab und zu Nachrichten, ohne aktiv nach Informationen zu suchen."
+        android:text="Ich nutze Bücher, Dokumentationen, soziale Medien und besuche Veranstaltungen, um mich zu informieren."
         android:textColor="#000000"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@+id/btn_option2"
         app:layout_constraintTop_toBottomOf="@+id/btn_option2"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp" />
+        app:strokeWidth="1dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

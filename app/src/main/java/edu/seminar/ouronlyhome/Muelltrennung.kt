@@ -25,11 +25,11 @@ class Muelltrennung : AppCompatActivity() {
         }
 
         option2.setOnClickListener {
-            navigateToNext(5)
+            navigateToNext(0)
         }
 
         option3.setOnClickListener {
-            navigateToNext(0)
+            navigateToNext(5)
         }
     }
 

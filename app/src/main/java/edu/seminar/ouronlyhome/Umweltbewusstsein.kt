@@ -16,7 +16,7 @@ class Umweltbewusstsein : AppCompatActivity() {
         val option3 = findViewById<Button>(R.id.btn_option3)
 
         option1.setOnClickListener {
-            navigateToNext(10)
+            navigateToNext(0)
         }
 
         option2.setOnClickListener {
@@ -24,7 +24,7 @@ class Umweltbewusstsein : AppCompatActivity() {
         }
 
         option3.setOnClickListener {
-            navigateToNext(0)
+            navigateToNext(10)
         }
     }
 
