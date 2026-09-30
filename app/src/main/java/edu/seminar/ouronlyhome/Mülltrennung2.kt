@@ -6,40 +6,39 @@ import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-class Intro : AppCompatActivity() {
+class Mülltrennung2 : AppCompatActivity() {
+    private var receivedPoints: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_intro)
+        setContentView(R.layout.activity_muelltrennung2)
+
+        receivedPoints = intent.getIntExtra("SCORE_POINTS", 0)
+
         val option1 = findViewById<Button>(R.id.btn_option1)
         val option2 = findViewById<Button>(R.id.btn_option2)
         val option3 = findViewById<Button>(R.id.btn_option3)
 
-        // 2. Set click listeners for each, passing different point values
         option1.setOnClickListener {
-            navigateToNext(10) // Option 1 gives 10 points
+            navigateToNext(10)
         }
 
         option2.setOnClickListener {
-            navigateToNext(5)  // Option 2 gives 5 points
+            navigateToNext(5)
         }
 
         option3.setOnClickListener {
-            navigateToNext(0)  // Option 3 gives 0 points
+            navigateToNext(0)
         }
     }
 
-    /**
-     * Helper function to handle navigation and pass point data
-     */
     private fun navigateToNext(points: Int) {
-        val intent = Intent(this, Intro_erweiternung_1::class.java).apply {
-            // This sends the point value to the next activity
-            putExtra("SCORE_POINTS", points)
+        val totalPoints = receivedPoints + points
+        val intent = Intent(this, ScoreActivity::class.java).apply {
+            putExtra("TOTAL_SCORE", totalPoints)
+            putExtra("MAX_SCORE", 20) // Assuming 10 points max per activity
         }
         startActivity(intent)
     }
-
 }
-
-

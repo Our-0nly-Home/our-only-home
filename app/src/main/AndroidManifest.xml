@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OurOnlyHome">
         <activity
-            android:name=".Intro_erweiternung_1"
+            android:name=".Mülltrennung"
+            android:exported="false" />
+        <activity
+            android:name=".Mülltrennung2"
+            android:exported="false" />
+        <activity
+            android:name=".ScoreActivity"
             android:exported="false" />
         <activity
             android:name=".PlanetActivity"
@@ -21,7 +27,7 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".Intro"
+            android:name=".Umweltbewusstsein"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
